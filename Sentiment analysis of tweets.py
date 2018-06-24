@@ -15,7 +15,7 @@ import numpy as np
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 #%%
-tweets_df = pd.read_pickle("D:\\CBA\\Practicum\\Practicum_1\\IPLFinals.pk1")
+tweets_df = pd.read_pickle("...\\Files\\IPLFinals.pk1")
 
 #%%
 #Building a word cloud:
@@ -79,7 +79,7 @@ tweets_df.loc[tweets_df.Compounded_polarity < 0, "Sentiment"] = "Negative"
 tweets_df.Sentiment.value_counts().plot(kind = 'bar')
 
 #%%
-tweets_df.to_pickle("D:\\CBA\\Practicum\\Practicum_1\\IPLFinals.pk1")
+tweets_df.to_pickle("...\\Files\\IPLFinals.pk1")
 
 
 #%%
@@ -188,6 +188,6 @@ DhoniSentiment = DhoniSentiment.drop_duplicates()
 DhoniSentiment = DhoniSentiment.loc[DhoniSentiment.Compounded_polarity != 0]
 
 #%%
-PlayerSentiment.to_excel("D:\\CBA\\Practicum\\Practicum_1\\PlayerSentiments.xlsx")
-CitySentiment.to_excel("D:\\CBA\\Practicum\\Practicum_1\\CitySentiment.xlsx")
-DhoniSentiment.to_excel("D:\\CBA\\Practicum\\Practicum_1\\DhoniSentiment.xlsx")
+PlayerSentiment.to_excel("...\\Files\\PlayerSentiments.xlsx")
+CitySentiment.to_excel("...\\Files\\CitySentiment.xlsx")
+DhoniSentiment.to_excel("...\\Files\\DhoniSentiment.xlsx")
