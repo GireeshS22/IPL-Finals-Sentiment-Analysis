@@ -1,4 +1,4 @@
-setwd("D:/CBA/Practicum/Practicum_1")
+setwd("_SET YOUR WD HERE_")
 
 Cities <- read.csv("CitySentiment.csv")
 
