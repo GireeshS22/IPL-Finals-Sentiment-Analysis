@@ -13,12 +13,12 @@ from textblob import TextBlob
 #%%
 #Loading the JSON file saved as dictionary values
 tweets = []
-for line in open('D:\\CBA\\Practicum\\Practicum_1\\Trends.txt', 'r'):
+for line in open('...\\Files\\Trends.txt', 'r'):
     if not ('{"limit":{"track"') in line:
         tweets.append(json.loads(line))
     
 samp = []
-for line in open('D:\\CBA\\Practicum\\Practicum_1\\sample.txt', 'r'):
+for line in open('...\\Files\\sample.txt', 'r'):
     if not ('{"limit":{"track"') in line:
         tweets.append(json.loads(line))    
     
@@ -36,11 +36,11 @@ for tweet in tweets:
     if (i % 500) == 0:
         print(i)
 
-tweets_df.to_pickle("D:\\CBA\\Practicum\\Practicum_1\\IPLFinals.pk1")
-tweets_df.to_csv("D:\\CBA\\Practicum\\Practicum_1\\tweets.csv")
+tweets_df.to_pickle("...\\Files\\IPLFinals.pk1")
+tweets_df.to_csv("...\\Files\\tweets.csv")
 #%%
 #Converting tweets that are not in english
-tweets_df = pd.read_pickle("D:\\CBA\\Practicum\\Practicum_1\\IPLFinals.pk1")
+tweets_df = pd.read_pickle("...\\Files\\IPLFinals.pk1")
 
 tweets_df["Translated"] = ""
 
@@ -63,4 +63,4 @@ for i in range(0, len(tweets_df)):
         print(count)
         
 #%%
-tweets_df.to_pickle("D:\\CBA\\Practicum\\Practicum_1\\IPLFinals.pk1")
+tweets_df.to_pickle("...\\Files\\IPLFinals.pk1")
